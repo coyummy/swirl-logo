@@ -1,0 +1,248 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>無題ドキュメント</title>
+<script src="jquery-1.11.1.min.js"></script>
+<script>
+$(function() {
+    $('.box').addClass('active');
+});
+</script>
+</head>
+
+<body>
+<div class="box">
+<div class="bd">
+<svg version="1.1" id="レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="280px" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+<g>
+<path class="path path-blue" fill="#00AAEA" d="M99.997,100.006h-0.018c0,0,0,0.025,0,0.038c-0.018,23.354-18.985,42.343-42.321,42.412
+c-0.038,0-0.081,0-0.116,0v49.37c0,1.791,2.024,3.228,4.517,3.172c3.592-0.172,7.108-0.545,10.582-1.118
+c30.574-4.967,56.267-24.737,69.757-51.425v-0.19C142.396,118.866,123.389,100.024,99.997,100.006z"/>
+<path class="path path-green" fill="#44AF35" d="M137.978,5c-2.972,0.142-5.936,0.418-8.826,0.829C97.77,10.294,71.315,30.328,57.541,57.556v0.099
+c0.061,23.369,19.063,42.351,42.438,42.351c0-23.399,19.01-42.432,42.4-42.45h0.018V8.18C142.396,6.412,140.433,4.983,137.978,5z"
+/>
+<path class="path path-yellow" fill="#FFF000" d="M57.541,57.655c0-0.005,0-0.03,0-0.048c0-0.02,0-0.038,0-0.051H8.322c-1.776,0-3.364,2.015-3.321,4.496
+c0.185,3.801,0.583,7.551,1.208,11.228c5.138,30.299,24.821,55.761,51.332,69.176h0.116c23.337-0.068,42.303-19.058,42.321-42.412
+v-0.038l0,0C76.604,100.006,57.602,81.023,57.541,57.655z"/>
+<path class="path path-pink" fill="#E64290" d="M193.637,126.248c-5.229-30.086-24.864-55.343-51.241-68.692h-0.127
+c-23.375,0.018-42.291,19.051-42.291,42.45c0.018,0,0.018,0,0.018,0c23.392,0.018,42.4,19.046,42.4,42.45h0.172h49.369
+c1.533,0,2.799-1.51,3.063-3.512C194.845,134.633,194.379,130.396,193.637,126.248z"/>
+</g>
+</svg>
+<div class="bdT"></div>
+<div class="bdB"></div>
+<div class="bdR"></div>
+<div class="bdL"></div>
+</div>
+</div>
+<style>
+
+body{background: #eee;}
+.box{width: 1060px;height: 370px;margin: 200px auto;}
+.bd{width: 1060px;height: 250px; text-align: center; position: relative;padding: 60px 0; -webkit-transition:all .5s ease-in-out;transition:all .5s ease-in-out; background: #fff;}
+
+
+div.bd div{background: #333; position:absolute;-webkit-transition:all .3s ease-in-out .3s;transition:all .3s ease-in-out .3s;}
+
+.active .bd div{background: #333;}
+.active .bd div.bdT{width: 100%; height:1px; top:0; left:0;background: #00AAEA;}
+.active .bd div.bdB{width: 100%; height:1px; bottom:0; right:0;background: #44AF35;}
+.active .bd div.bdR{height:100%; width :1px; right:0; top:0;background: #FFF000;}
+.active .bd div.bdL{height:100%; width :1px; left:0; bottom:0;background: #E64290;}
+
+div.bdT{width: 0;}
+div.bdB{width: 0;}
+div.bdR{height:0;}
+div.bdL{height:0;}
+
+.box:hover .bd div.bdT{width: 0;}
+.box:hover .bd div.bdB{width: 0;}
+.box:hover .bd div.bdR{height:0;}
+.box:hover .bd div.bdL{height:0;}
+
+.path-blue{	/*ストロークの色や太さ*/
+	stroke:#00AAEA;
+	fill:#fff;
+	stroke-width:1;
+	/*破線*/
+	stroke-DASHarray: 3000;
+	stroke-DASHoffset:3000;
+	/*アニメーション*/
+	-moz-animation:DASH 2s ease-in-out .5s forwards;
+	-webkit-animation:DASH 2s ease-in-out .5s forwards;
+	-o-animation:DASH 2s ease-in-out .5s forwards;
+	animation:DASH 2s ease-in-out .5s forwards;
+	-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out;	
+}
+
+@keyframes DASH{
+	0%  {stroke-DASHoffset:3000;fill:#fff;}
+	80% {stroke-DASHoffset:2000;fill:#fff;}
+	100%{stroke-DASHoffset:0;fill:#00AAEA;}
+}
+
+@-moz-keyframes DASH{
+	0%  {stroke-DASHoffset:3000;fill:#fff;}
+	80% {stroke-DASHoffset:2000;fill:#fff;}
+	100%{stroke-DASHoffset:0;fill:#00AAEA;}
+}
+
+@-webkit-keyframes DASH{
+	0%  {stroke-DASHoffset:3000;fill:#fff;}
+	80% {stroke-DASHoffset:2000;fill:#fff;}
+	100%{stroke-DASHoffset:0;fill:#00AAEA;}
+}
+
+@-o-keyframes DASH{
+	0%  {stroke-DASHoffset:3000;fill:#fff;}
+	80% {stroke-DASHoffset:2000;fill:#fff;}
+	100%{stroke-DASHoffset:0;fill:#00AAEA;}
+}
+
+@-ms-keyframes DASH{
+	0%  {stroke-DASHoffset:3000;fill:#fff;}
+	80% {stroke-DASHoffset:2000;fill:#fff;}
+	100%{stroke-DASHoffset:0;fill:#00AAEA;}
+}
+
+.path-green{	/*ストロークの色や太さ*/
+	stroke:#44AF35;
+	fill:#fff;
+	stroke-width:1;
+	/*破線*/
+	stroke-DASHarray: 3000;
+	stroke-DASHoffset:3000;
+	/*アニメーション*/
+	-moz-animation:DASH2 2s ease-in-out .5s forwards;
+	-webkit-animation:DASH2 2s ease-in-out .5s forwards;
+	-o-animation:DASH2 2s ease-in-out .5s forwards;
+	animation:DASH2 2s ease-in-out .5s forwards;
+	-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out;	
+}
+
+@keyframes DASH2{
+	0%  {stroke-DASHoffset:3000;fill:#fff;}
+	80% {stroke-DASHoffset:2000;fill:#fff;}
+	100%{stroke-DASHoffset:0;fill:#44AF35;}
+}
+
+@-moz-keyframes DASH2{
+	0%  {stroke-DASHoffset:3000;fill:#fff;}
+	80% {stroke-DASHoffset:2000;fill:#fff;}
+	100%{stroke-DASHoffset:0;fill:#44AF35;}
+}
+
+@-webkit-keyframes DASH2{
+	0%  {stroke-DASHoffset:3000;fill:#fff;}
+	80% {stroke-DASHoffset:2000;fill:#fff;}
+	100%{stroke-DASHoffset:0;fill:#44AF35;}
+}
+
+@-o-keyframes DASH2{
+	0%  {stroke-DASHoffset:3000;fill:#fff;}
+	80% {stroke-DASHoffset:2000;fill:#fff;}
+	100%{stroke-DASHoffset:0;fill:#44AF35;}
+}
+
+@-ms-keyframes DASH2{
+	0%  {stroke-DASHoffset:3000;fill:#fff;}
+	80% {stroke-DASHoffset:2000;fill:#fff;}
+	100%{stroke-DASHoffset:0;fill:#44AF35;}
+}
+
+.path-yellow{	/*ストロークの色や太さ*/
+	stroke:#FFF000;
+	fill:#fff;
+	stroke-width:1;
+	/*破線*/
+	stroke-DASHarray: 3000;
+	stroke-DASHoffset:3000;
+	/*アニメーション*/
+	-moz-animation:DASH3 2s ease-in-out .5s forwards;
+	-webkit-animation:DASH3 2s ease-in-out .5s forwards;
+	-o-animation:DASH3 2s ease-in-out .5s forwards;
+	animation:DASH3 2s ease-in-out .5s forwards;
+	-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out;	
+}
+
+@keyframes DASH3{
+	0%  {stroke-DASHoffset:3000;fill:#fff;}
+	80% {stroke-DASHoffset:2000;fill:#fff;}
+	100%{stroke-DASHoffset:0;fill:#FFF000;}
+}
+
+@-moz-keyframes DASH3{
+	0%  {stroke-DASHoffset:3000;fill:#fff;}
+	80% {stroke-DASHoffset:2000;fill:#fff;}
+	100%{stroke-DASHoffset:0;fill:#FFF000;}
+}
+
+@-webkit-keyframes DASH3{
+	0%  {stroke-DASHoffset:3000;fill:#fff;}
+	80% {stroke-DASHoffset:2000;fill:#fff;}
+	100%{stroke-DASHoffset:0;fill:#FFF000;}
+}
+
+@-o-keyframes DASH3{
+	0%  {stroke-DASHoffset:3000;fill:#fff;}
+	80% {stroke-DASHoffset:2000;fill:#fff;}
+	100%{stroke-DASHoffset:0;fill:#FFF000;}
+}
+
+@-ms-keyframes DASH3{
+	0%  {stroke-DASHoffset:3000;fill:#fff;}
+	80% {stroke-DASHoffset:2000;fill:#fff;}
+	100%{stroke-DASHoffset:0;fill:#FFF000;}
+}
+
+.path-pink{	/*ストロークの色や太さ*/
+	stroke:#E64290;
+	fill:#fff;
+	stroke-width:1;
+	/*破線*/
+	stroke-DASHarray: 3000;
+	stroke-DASHoffset:3000;
+	/*アニメーション*/
+	-moz-animation:DASH4 2s ease-in-out .5s forwards;
+	-webkit-animation:DASH4 2s ease-in-out .5s forwards;
+	-o-animation:DASH4 2s ease-in-out .5s forwards;
+	animation:DASH4 2s ease-in-out .5s forwards;
+	-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out;	
+}
+
+@keyframes DASH4{
+	0%  {stroke-DASHoffset:3000;fill:#fff;}
+	80% {stroke-DASHoffset:2000;fill:#fff;}
+	100%{stroke-DASHoffset:0;fill:#E64290;}
+}
+
+@-moz-keyframes DASH4{
+	0%  {stroke-DASHoffset:3000;fill:#fff;}
+	80% {stroke-DASHoffset:2000;fill:#fff;}
+	100%{stroke-DASHoffset:0;fill:#E64290;}
+}
+
+@-webkit-keyframes DASH4{
+	0%  {stroke-DASHoffset:3000;fill:#fff;}
+	80% {stroke-DASHoffset:2000;fill:#fff;}
+	100%{stroke-DASHoffset:0;fill:#E64290;}
+}
+
+@-o-keyframes DASH4{
+	0%  {stroke-DASHoffset:3000;fill:#fff;}
+	80% {stroke-DASHoffset:2000;fill:#fff;}
+	100%{stroke-DASHoffset:0;fill:#E64290;}
+}
+
+@-ms-keyframes DASH4{
+	0%  {stroke-DASHoffset:3000;fill:#fff;}
+	80% {stroke-DASHoffset:2000;fill:#fff;}
+	100%{stroke-DASHoffset:0;fill:#E64290;}
+}
+
+
+
+</style>
+</body>
+</html>
